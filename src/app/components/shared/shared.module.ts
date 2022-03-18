@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+// Components APP
 import { HeaderComponent } from './header/header.component';
-import { PagesComponent } from '../../pages/Home/pages.component';
+import { PagesComponent } from '../../pages/Home/Home.component';
 import { TableComponent } from './table/table.component';
+import { ModalListComponent } from './modal-list/modal-list.component';
 
 // Angular Material
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -12,23 +15,27 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatMenuModule } from '@angular/material/menu';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
     PagesComponent,
-    TableComponent
+    TableComponent,
+    ModalListComponent
   ],
   imports: [
     CommonModule,
+    FormsModule,
     MatToolbarModule,
     MatIconModule,
     BrowserAnimationsModule,
     MatTableModule,
     MatPaginatorModule,
     MatProgressSpinnerModule,
-    MatMenuModule
+    MatMenuModule,
+    MatDialogModule
   ],
   exports: [
     CommonModule,
