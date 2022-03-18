@@ -1,0 +1,50 @@
+<div class="modal-header p-0">
+  <h1 mat-dialog-title class="font-weight-bold">Edit Form Book</h1>
+  <button *ngIf="dataBook.isShow" class="btn btn-danger btn-sm" mat-dialog-close>
+    <mat-icon>close</mat-icon>
+  </button>
+</div>
+<div mat-dialog-content>
+  <form>
+    <div class="row">
+      <div class="container">
+        <div class="form-group text-center col-md-12">
+          <img
+            [src]="data.volumeInfo.imageLinks.thumbnail"
+            [alt]="data.volumeInfo.title"
+            width="200px"
+            height="100%"
+          />
+        </div>
+        <div class="form-group col-md-12 col-sm-12">
+          <div class="form-group row">
+            <div class="col-md-12">
+              <label>Title</label>
+              <input
+                [(ngModel)]="data.volumeInfo.title"
+                [readonly]="dataBook.isShow"
+                type="text"
+                name="title"
+                class="form-control"
+              />
+            </div>
+            <div class="col-md-12 mt-4">
+              <label>Subtitle</label>
+              <textarea
+                [(ngModel)]="data.volumeInfo.subtitle"
+                [readonly]="dataBook.isShow"
+                type="textarea"
+                name="subtitle"
+                class="form-control"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  <div *ngIf="!dataBook.isShow" class="text-right">
+    <button class="btn btn-danger mr-4" mat-button mat-dialog-close>Close</button>
+    <button class="btn btn-primary" mat-button (click)="save()">Save</button>
+  </div>
+</div>
