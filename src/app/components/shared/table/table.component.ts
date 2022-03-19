@@ -38,7 +38,15 @@ export class TableComponent implements AfterViewInit {
   }
 
   // tslint:disable-next-line:typedef
-  ngAfterViewInit() { }
+  applyFilter(event: Event) {
+    let filterValue = (event.target as HTMLInputElement).value;
+    filterValue = filterValue.trim().toLowerCase();
+    this.dataSource.filter = filterValue;
+  }
+  // tslint:disable-next-line:typedef
+  ngAfterViewInit() {
+    //
+  }
 
   // tslint:disable-next-line:typedef
   getListBooks(): void {

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class GlobalService {
   public httpOptions = {
   headers: new HttpHeaders({Authorization: 'Api-Key AIzaSyCG8PBGxq4vPTQvU5kGbmFCuMi6Hvs_dKY'})

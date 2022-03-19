@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { MatDialog } from '@angular/material/dialog';
 
 import { TableComponent } from './table.component';
 
@@ -8,7 +9,8 @@ describe('TableComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TableComponent ]
+      declarations: [TableComponent],
+      providers: [  { provide: MatDialog, useValue: {} }]
     })
     .compileComponents();
   });

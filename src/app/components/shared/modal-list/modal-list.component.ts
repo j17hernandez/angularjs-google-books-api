@@ -7,12 +7,16 @@ import Swal from 'sweetalert2';
   styleUrls: ['./modal-list.component.css']
 })
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class ModalListComponent {
   data: any;
+  authors: string;
+  categories: string;
   // tslint:disable-next-line:no-output-rename
   constructor(@Inject(MAT_DIALOG_DATA) public dataBook) {
     this.data = dataBook.book;
+    this.authors = this.data.volumeInfo.authors.join(',');
+    this.categories = this.data.volumeInfo.categories.join(',');
   }
 
   save(): void {

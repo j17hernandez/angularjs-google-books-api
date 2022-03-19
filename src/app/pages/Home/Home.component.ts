@@ -6,6 +6,7 @@ import Swal from 'sweetalert2';
   selector: 'app-pages',
   templateUrl: './Home.component.html',
   styleUrls: ['./Home.component.css'],
+  providers: [GlobalService]
 })
 export class PagesComponent implements OnInit {
   books = [];

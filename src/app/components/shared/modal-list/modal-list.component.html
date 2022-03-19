@@ -21,22 +21,31 @@
             <div class="col-md-12">
               <label>Title</label>
               <input
-                [(ngModel)]="data.volumeInfo.title"
-                [readonly]="dataBook.isShow"
-                type="text"
-                name="title"
-                class="form-control"
+              [(ngModel)]="data.volumeInfo.title"
+              [readonly]="dataBook.isShow"
+              type="text"
+              name="title"
+              class="form-control"
               />
             </div>
             <div class="col-md-12 mt-4">
               <label>Subtitle</label>
               <textarea
-                [(ngModel)]="data.volumeInfo.subtitle"
-                [readonly]="dataBook.isShow"
-                type="textarea"
-                name="subtitle"
-                class="form-control"
+              [(ngModel)]="data.volumeInfo.subtitle"
+              [readonly]="dataBook.isShow"
+              type="textarea"
+              name="subtitle"
+              class="form-control"
               ></textarea>
+            </div>
+            <div class="col-md-12 mt-4">
+              <label>Category</label>
+              <input [(ngModel)]="categories" readonly type="textarea" name="categories" class="form-control" />
+            </div>
+            <div class="col-md-12 mt-4">
+              <label>Author/es</label>
+              <textarea [(ngModel)]="authors" readonly type="textarea" name="authors"
+                class="form-control"></textarea>
             </div>
           </div>
         </div>
