@@ -1,5 +1,5 @@
 <div class="modal-header p-0">
-  <h1 mat-dialog-title class="font-weight-bold">Edit Form Book</h1>
+  <h1 mat-dialog-title class="font-weight-bold">{{ dataBook.isShow ? 'Show' : 'Edit' }} Form Book</h1>
   <button *ngIf="dataBook.isShow" class="btn btn-danger btn-sm" mat-dialog-close>
     <mat-icon>close</mat-icon>
   </button>
